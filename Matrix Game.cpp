@@ -1,0 +1,63 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    int t,n,m,a[1000][1000],i,j,b=0,c=0,d,e,f,g,h;
+    cin>>t;
+    for(h=0;h<t;h++)
+    {
+        cin>>n>>m;
+        for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=m;j++)
+            {
+                cin>>a[i][j];
+            }
+        }
+        for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=m;j++)
+            {
+                if(a[i][j]==1)
+                {
+                    b++;
+                    break;
+                }
+            }
+        }
+        for(j=1;j<=m;j++)
+        {
+            for(i=1;i<=n;i++)
+            {
+                if(a[i][j]==1)
+                {
+                    c++;
+                    break;
+                }
+            }
+        }
+        d=n-b;
+        e=m-c;
+        if(d<=e)
+        {
+            if(d%2!=0)
+            {
+                cout<<"Ashish"<<endl;
+            }
+            else{
+                cout<<"Vivek"<<endl;
+            }
+        }
+        else{
+            if(e%2!=0)
+            {
+                cout<<"Ashish"<<endl;
+            }
+            else{
+                cout<<"Vivek"<<endl;
+            }
+        }
+        b=0;c=0;
+    }
+}

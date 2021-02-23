@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int q,a,b,n,s,i,j,c,e,d,f,g,h;
+    cin>>q;
+    for(i=0;i<q;i++)
+    {
+        cin>>a>>b>>n>>s;
+        if(n>s)
+        {
+            if(b>=s)
+            {
+                cout<<"YES"<<endl;
+                continue;
+            }
+            else{
+                cout<<"NO"<<endl;
+                continue;
+            }
+        }
+        if(s%n==0)
+        {
+            e=s/n;
+            if(e<=a)
+            {
+                cout<<"YES"<<endl;
+            }
+            else{
+            if((b+(n*a))>=s)
+            {
+                cout<<"YES"<<endl;
+            }
+            else{
+                cout<<"NO"<<endl;
+            }
+            }
+        }
+        else if(s%n!=0)
+        {
+            if(a>=(s/n))
+            {
+                d=(s/n)*n;
+                c=s-d;
+                if(c>b){
+                    cout<<"NO"<<endl;
+                }
+                else{
+                    cout<<"YES"<<endl;
+                }
+            }
+            else{
+                d=a*n;
+                c=s-d;
+                if(c>b){
+                    cout<<"NO"<<endl;
+                }
+                else{
+                    cout<<"YES"<<endl;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    int n,a[100000],i,j,b[100000],c,d,e,f,g,h;
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+        cin>>a[i];
+        b[i]=a[i];
+    }
+    sort(b+1,b+1+n);
+    for(i=1;i<=n;i++)
+    {
+        if(a[i]==b[1])
+        {
+            c=i;
+        }
+        if(a[i]==b[n])
+        {
+            d=i;
+        }
+    }
+    if(c>d)
+    {
+        e=n-c;
+        f=d-1;
+        if(e>=f)
+        {
+            cout<<n-d;
+        }
+        else{
+            cout<<c-1;
+        }
+    }
+    else{
+        e=n-d;
+        f=c-1;
+        if(e>=f)
+        {
+            cout<<n-c;
+        }
+        else{
+            cout<<d-1;
+        }
+    }
+}

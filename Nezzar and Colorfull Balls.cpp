@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    int t,n,a[100000],i,j,b=1,c=0,d,e,f,g,h;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+        }
+        for(i=0;i<n-1;i++)
+        {
+            if(a[i]==a[i+1])
+            {
+                b++;
+                if(i==n-2)
+                {
+                    if(b>c)
+                    {
+                        c=b;
+                    }
+                }
+            }
+            else{
+                if(b>c)
+                {
+                    c=b;
+                }
+                b=1;
+            }
+        }
+        if(c==0)
+        {
+            cout<<n<<endl;
+        }
+        else{
+            cout<<c<<endl;
+        }
+        b=1;c=0;
+    }
+}

@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    int t,n,i,j,a=0,b,c,d,e,f,g,h,k;
+    cin>>t;
+    for(i=0;i<t;i++)
+    {
+        cin>>n;
+        if(n==1)
+        {
+            cout<<0<<endl;
+            continue;
+        }
+        for(j=0;;j++)
+        {
+            if(a==1)
+            {
+                if(n%6!=0)
+                {
+                    cout<<-1<<endl;
+                    a=0;
+                    break;
+                }
+                else{
+                        c++;
+                    a=0;
+                }
+
+            }
+            if(n%6==0)
+            {
+                n=n/6;
+                c++;
+                if(n==1)
+                {
+                    cout<<c<<endl;
+                    break;
+                }
+            }
+            else{
+                n=n*2;
+                a=1;
+            }
+        }
+        c=0;
+        a=0;
+    }
+}
